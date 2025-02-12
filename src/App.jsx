@@ -1,14 +1,21 @@
-import { useState } from "react";
-import lovesvg from "./assets/All You Need Is Love SVG Cut File.svg";
-import lovesvg2 from "./assets/Love In The Air SVG Cut File.svg";
+import { useState, useEffect } from "react";
 
 export default function Page() {
   const [noCount, setNoCount] = useState(0);
   const [yesPressed, setYesPressed] = useState(false);
+  const [showCryingGif, setShowCryingGif] = useState(false);
   const yesButtonSize = noCount * 20 + 16;
 
+  // Background Music
+  useEffect(() => {
+    const audio = new Audio(""); // Replace with your preferred track
+    audio.loop = true;
+    audio.play();
+  }, []);
+
   const handleNoClick = () => {
-    setNoCount(noCount + 1);
+    setNoCount((prevCount) => prevCount + 1);
+    setShowCryingGif(true); // Show Crying Pikachu when "No" is clicked
   };
 
   const getNoButtonText = () => {
@@ -32,7 +39,7 @@ export default function Page() {
       "Come on that was a good one?",
       "YEAH im gonna poop on you  ;(",
       "Gonna make you eat it",
-      "Pls?",
+      "Pls",
       "Plss?",
       "Plsss?",
       "Plssss?",
@@ -47,18 +54,6 @@ export default function Page() {
       "Plsssssssssssss?",
       "Plssssssssssssss?",
       "Plsssssssssssssss?",
-      "Plssssssssssssssss?",
-      "Plsssssssssssssssss?",
-      "Plssssssssssssssssss?",
-      "Plsssssssssssssssssss?",
-      "Plssssssssssssssssssss?",
-      "Plsssssssssssssssssssss?",
-      "Plssssssssssssssssssssss?",
-      "Plsssssssssssssssssssssss?",
-      "Plssssssssssssssssssssssss?",
-      "Plsssssssssssssssssssssssss?",
-      "Plssssssssssssssssssssssssss?",
-      "Plsssssssssssssssssssssssssss?",
     ];
 
     return phrases[Math.min(noCount, phrases.length - 1)];
@@ -68,31 +63,37 @@ export default function Page() {
     <div className="overflow-hidden flex flex-col items-center justify-center pt-4 h-screen -mt-16 selection:bg-rose-600 selection:text-white text-zinc-900">
       {yesPressed ? (
         <>
-          <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" />
+          <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" className="animate__animated animate__fadeIn" />
           <div className="text-4xl md:text-6xl font-bold my-4">
-            Ok Yayyyyy!!!
+            I love you so much baby💘💘
           </div>
+          {/* Add confetti or fun celebration */}
+          <div className="animate__animated animate__bounceIn">🎉🎉🎉</div>
         </>
       ) : (
         <>
           <img
-            src={lovesvg}
-            className="fixed animate-pulse top-10 md:left-24 left-6 md:w-40 w-28"
+            src="https://pngimg.com/uploads/hello_kitty/hello_kitty_PNG25.png"
+            className="fixed animate-pulse top-10 md:left-24 left-6 md:w-40 w-28 animate__animated animate__bounceIn"
           />
           <img
-            src={lovesvg2}
+            src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjdhYWExa3ozaTFwa2Nkdm02MjB6ZWU2cnZjNHd6OHVsZTFjOWxmaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/8ZPdJ9KclyWDuxh1U2/giphy.gif"
             className="fixed bottom-16 -z-10 animate-pulse md:right-24 right-10 md:w-40 w-32"
           />
           <img
             className="h-[230px] rounded-lg shadow-lg"
-            src="https://gifdb.com/images/thumbnail/cute-hello-kitty-sticker-love-you-card-urptm0td2fy38a2x.gif"
+            src={
+              showCryingGif
+                ? "https://www.icegif.com/wp-content/uploads/2024/02/icegif-815.gif"
+                : "https://gifdb.com/images/thumbnail/cute-hello-kitty-sticker-love-you-card-urptm0td2fy38a2x.gif"
+            }
           />
-          <h1 className="text-4xl md:text-6xl my-4 text-center">
-            Will you be my Valentine?
+          <h1 className="text-4xl md:text-6xl my-8 text-center animate__animated animate__shakeX">
+            WILL YOU BE MY VALENTINE?
           </h1>
           <div className="flex flex-wrap justify-center gap-2 items-center">
             <button
-              className={`bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg mr-4`}
+              className={`bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg mr-4 animate__animated animate__zoomIn`}
               style={{ fontSize: yesButtonSize }}
               onClick={() => setYesPressed(true)}
             >
@@ -100,29 +101,13 @@ export default function Page() {
             </button>
             <button
               onClick={handleNoClick}
-              className=" bg-rose-500 hover:bg-rose-600 rounded-lg text-white font-bold py-2 px-4"
+              className=" bg-rose-500 hover:bg-rose-600 rounded-lg text-white font-bold py-2 px-4 animate__animated animate__shakeY"
             >
-              {noCount === 0 ? "No" : getNoButtonText()}
+              {getNoButtonText()}
             </button>
           </div>
         </>
       )}
-      <Footer />
     </div>
   );
 }
-
-const Footer = () => {
-  return (
-    <a
-      className="fixed bottom-2 right-2 backdrop-blur-md opacity-80 hover:opacity-95 border p-1 rounded border-rose-300"
-      href="https://github.com/Xeven777/valentine"
-      target="__blank"
-    >
-      Made with{" "}
-      <span role="img" aria-label="heart">
-        ❤️
-      </span>
-    </a>
-  );
-};
