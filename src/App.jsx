@@ -14,24 +14,51 @@ export default function Page() {
   const getNoButtonText = () => {
     const phrases = [
       "No",
-      "Are you sure?",
-      "Really sure?",
-      "Think again!",
-      "Last chance!",
-      "Surely not?",
-      "You might regret this!",
-      "Give it another thought!",
-      "Are you absolutely certain?",
-      "This could be a mistake!",
-      "Have a heart!",
-      "Don't be so cold!",
-      "Change of heart?",
-      "Wouldn't you reconsider?",
-      "Is that your final answer?",
-      "You're breaking my heart ;(",
-      "Is that your final answer?",
-      "You're breaking my heart ;(",
-      "Plsss? :( You're breaking my heart",
+      "😐",
+      "jajaja I knew you were gonna do that",
+      "Youre lying😭!",
+      "Stop trolling!",
+      "bruh moment?",
+      "You'll regret this😡!",
+      "Baka!!!!",
+      "Meanie butt☹️",
+      "I'LL EXPLODE!",
+      "Wow okay be like that!",
+      "ok..",
+      "k..",
+      "Okay not funny",
+      "What do you call a French man wearing sandals?",
+      "Philipe Fallop..:(",
+      "Come on that was a good one?",
+      "YEAH im gonna poop on you  ;(",
+      "Gonna make you eat it",
+      "Pls?",
+      "Plss?",
+      "Plsss?",
+      "Plssss?",
+      "Plsssss?",
+      "Plssssss?",
+      "Plsssssss?",
+      "Plssssssss?",
+      "Plsssssssss?",
+      "Plssssssssss?",
+      "Plsssssssssss?",
+      "Plssssssssssss?",
+      "Plsssssssssssss?",
+      "Plssssssssssssss?",
+      "Plsssssssssssssss?",
+      "Plssssssssssssssss?",
+      "Plsssssssssssssssss?",
+      "Plssssssssssssssssss?",
+      "Plsssssssssssssssssss?",
+      "Plssssssssssssssssssss?",
+      "Plsssssssssssssssssssss?",
+      "Plssssssssssssssssssssss?",
+      "Plsssssssssssssssssssssss?",
+      "Plssssssssssssssssssssssss?",
+      "Plsssssssssssssssssssssssss?",
+      "Plssssssssssssssssssssssssss?",
+      "Plsssssssssssssssssssssssssss?",
     ];
 
     return phrases[Math.min(noCount, phrases.length - 1)];
@@ -58,7 +85,7 @@ export default function Page() {
           />
           <img
             className="h-[230px] rounded-lg shadow-lg"
-            src="https://gifdb.com/images/high/cute-Love-bear-roses-ou7zho5oosxnpo6k.gif"
+            src="https://gifdb.com/images/thumbnail/cute-hello-kitty-sticker-love-you-card-urptm0td2fy38a2x.gif"
           />
           <h1 className="text-4xl md:text-6xl my-4 text-center">
             Will you be my Valentine?
