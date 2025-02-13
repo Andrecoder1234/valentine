@@ -7,6 +7,7 @@ export default function Page() {
   const [letterOpened, setLetterOpened] = useState(false); // Track if letter is opened
   const [confirmingYes, setConfirmingYes] = useState(false); // Track if user is confirming "Yes"
   const [pranked, setPranked] = useState(false); // Track if user has been pranked
+  const [mailboxOpened, setMailboxOpened] = useState(false); // Track if mailbox has been opened
 
   const yesButtonSize = noCount * 20 + 16;
 
@@ -54,6 +55,16 @@ export default function Page() {
     window.location.reload(); // Refresh to go back to the start page
   };
 
+  // Click to open mailbox
+  const handleOpenMailbox = () => {
+    setMailboxOpened(true); // This transitions to the next screen
+  };
+
+  // Handle letter gif click to move to the next page
+  const handleLetterGifClick = () => {
+    setLetterOpened(true); // Open the letter page when gif is clicked
+  };
+
   if (pranked) {
     return (
       <div className="overflow-hidden flex flex-col items-center justify-center pt-4 h-screen bg-pink-200 selection:bg-rose-600 selection:text-white text-zinc-900">
@@ -70,15 +81,43 @@ export default function Page() {
     );
   }
 
-  if (!letterOpened) {
+  if (!mailboxOpened) {
+    // First screen where the user clicks to open the mailbox
     return (
       <div className="overflow-hidden flex flex-col items-center justify-center pt-4 h-screen bg-pink-200 selection:bg-rose-600 selection:text-white text-zinc-900">
         <div className="text-3xl md:text-5xl font-bold text-center mb-8 animate__fadeIn">
-          You've got a letter from a secret admirer🤔🙊
+          You've got Mail
         </div>
+        <img
+          src="https://i.giphy.com/6UbEozsUuERkQ.webp"
+          className="w-40 h-auto mb-4 animate__animated animate__fadeIn"
+        />
+      
         <button
-          onClick={() => setLetterOpened(true)} // This opens the main page
-          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg"
+          onClick={handleOpenMailbox}
+          className="bg-pink-400 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-lg"
+        >
+          Open Mailbox
+        </button>
+      </div>
+    );
+  }
+
+  if (!letterOpened) {
+    // After mailbox is opened, show the "You just got a letter" screen
+    return (
+      <div className="overflow-hidden flex flex-col items-center justify-center pt-4 h-screen bg-pink-200 selection:bg-rose-600 selection:text-white text-zinc-900">
+        <div className="text-3xl md:text-5xl font-bold text-center mb-8 animate__fadeIn">
+          It's a letter from a secret admirer🤔🙊
+        </div>
+        <img
+          src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXJsbXBxNTBsamd1anZ2dWVkdGd2dXljdHgzM2N0eGw0YnVwYmd1OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/fYjpbCbt3l0HcM4ohW/giphy.gif"
+          className="w-40 h-auto mb-4 animate__animated animate__fadeIn"
+          onClick={handleLetterGifClick} // Make the gif clickable
+        />
+        <button
+          className="bg-pink-400 hover:bg-pink-500 text-white font-bold py-2 px-4 rounded-lg"
+          style={{ display: "none" }} // Hide the button since the gif is now clickable
         >
           Open Letter
         </button>
@@ -108,11 +147,7 @@ export default function Page() {
           />
           <img
             className="h-[230px] rounded-lg shadow-lg"
-            src={
-              showCryingGif
-                ? "https://www.icegif.com/wp-content/uploads/2024/02/icegif-815.gif"
-                : "https://gifdb.com/images/thumbnail/cute-hello-kitty-sticker-love-you-card-urptm0td2fy38a2x.gif"
-            }
+            src={showCryingGif ? "https://www.icegif.com/wp-content/uploads/2024/02/icegif-815.gif" : "https://gifdb.com/images/thumbnail/cute-hello-kitty-sticker-love-you-card-urptm0td2fy38a2x.gif"}
           />
           <h1 className="text-4xl md:text-6xl my-8 text-center animate__animated animate__shakeX">
             WILL YOU BE MY VALENTINE?

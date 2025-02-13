@@ -22,3 +22,12 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+.expandGif {
+  width: 100vw;  /* Make it cover the entire width of the screen */
+  height: 100vh; /* Make it cover the entire height of the screen */
+  object-fit: cover; /* Maintain aspect ratio while covering */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure it stays behind the content */
+}
