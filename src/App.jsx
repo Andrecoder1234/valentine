@@ -24,10 +24,10 @@ export default function Page() {
 
   const getNoButtonText = () => {
     const phrases = [
-      "No", "😐", "jajaja I knew you were gonna do that", "Youre lying😭!", "Stop trolling!",
-      "bruh moment?", "You'll regret this😡!", "Baka!!!!", "Meanie butt☹️", "I'LL EXPLODE!",
+      "No", "😐", "jajaja I knew you were gonna do that", "Youre lying😭!", "Guess What!",
+      "Chicken Buttt!", "you'll regret this😡!", "Baka!!!!", "Meanie butt☹️", "Bruh moment!",
       "Wow okay be like that!", "ok..", "k..", "Okay not funny", "What do you call a French man wearing sandals?",
-      "Philipe Fallop..:(", "Come on that was a good one?", "YEAH im gonna poop on you  ;(", "Gonna make you eat it", "Pls"
+      "Philipe Fallop..:(", "Come on that was a good one?", "YEAH im gonna poop on you :(", "You're Gonna you eat it", "Pls", "Plsss"
     ];
 
     return phrases[Math.min(noCount, phrases.length - 1)];
@@ -147,20 +147,20 @@ export default function Page() {
 
           {/* Confirmation dialog */}
           {confirmingYes && !pranked && (
-            <div className="mt-4">
-              <h2 className="text-2xl font-bold text-pink-500">Are you sure?</h2>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded-lg shadow-lg">
+              <h2 className="text-2xl font-bold text-pink-400">Are you sure?</h2>
               <div className="mt-4 flex gap-4">
                 <button
                   onClick={handleConfirmYes}
                   className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg"
                 >
-                  Confirm
+                  Heck Yeah
                 </button>
                 <button
                   onClick={handleCancelYes}
                   className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg"
                 >
-                  Cancel
+                  Nuh uh
                 </button>
               </div>
             </div>
