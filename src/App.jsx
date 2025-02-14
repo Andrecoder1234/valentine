@@ -8,15 +8,18 @@ export default function Page() {
   const [confirmingYes, setConfirmingYes] = useState(false); // Track if user is confirming "Yes"
   const [pranked, setPranked] = useState(false); // Track if user has been pranked
   const [mailboxOpened, setMailboxOpened] = useState(false); // Track if mailbox has been opened
+  const [audioPlayed, setAudioPlayed] = useState(false); // Track if audio has been played
 
   const yesButtonSize = noCount * 20 + 16;
 
   // Background Music
   useEffect(() => {
-    const audio = new Audio(""); // Replace with actual music link
-    audio.loop = true;
-    audio.play();
-  }, []);
+    if (mailboxOpened && !audioPlayed) {
+      const audio = new Audio("https://files4.mytinyphone.com/file.php?fileID=3860178&type=ringt");
+      audio.play();
+      setAudioPlayed(true); // Mark audio as played
+    }
+  }, [mailboxOpened, audioPlayed]);
 
   const handleNoClick = () => {
     setNoCount((prevCount) => prevCount + 1);
