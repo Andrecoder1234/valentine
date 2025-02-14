@@ -10,7 +10,7 @@ export default function Page() {
   const [mailboxOpened, setMailboxOpened] = useState(false); // Track if mailbox has been opened
   const [audioPlayed, setAudioPlayed] = useState(false); // Track if audio has been played
 
-  const yesButtonSize = noCount * 20 + 16;
+  const yesButtonSize = noCount * 10 + 16;
 
   // Background Music
   useEffect(() => {
