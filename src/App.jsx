@@ -144,7 +144,6 @@ export default function Page() {
             src="https://pngimg.com/uploads/hello_kitty/hello_kitty_PNG25.png"
             className="fixed animate-pulse top-10 md:left-24 left-6 md:w-40 w-28 animate__animated animate__bounceIn"
           />
-
           <img
             className="h-[230px] rounded-lg shadow-lg"
             src={showCryingGif ? "https://www.icegif.com/wp-content/uploads/2024/02/icegif-815.gif" : "https://gifdb.com/images/thumbnail/cute-hello-kitty-sticker-love-you-card-urptm0td2fy38a2x.gif"}
