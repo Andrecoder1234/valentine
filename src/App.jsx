@@ -145,12 +145,8 @@ export default function Page() {
             className="fixed animate-pulse top-10 md:left-24 left-6 md:w-40 w-28 animate__animated animate__bounceIn"
           />
           <img
-  src="https://pngimg.com/uploads/hello_kitty/hello_kitty_PNG25.png"
-  className="fixed animate-pulse top-10 left-6 md:left-24 md:w-40 w-28 animate__animated animate__bounceIn"
-/>
-<img
   src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjdhYWExa3ozaTFwa2Nkdm02MjB6ZWU2cnZjNHd6OHVsZTFjOWxmaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/8ZPdJ9KclyWDuxh1U2/giphy.gif"
-  className="fixed z-20 animate-pulse bottom-20 md:bottom-1 md:right-12 right-4 md:w-40 w-24"
+  className="fixed bottom-[-20px] animate-pulse md:right-10 right-10 md:w-40 w-32 z-20"
 />
 
           <img
