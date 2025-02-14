@@ -145,9 +145,14 @@ export default function Page() {
             className="fixed animate-pulse top-10 md:left-24 left-6 md:w-40 w-28 animate__animated animate__bounceIn"
           />
           <img
-            src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjdhYWExa3ozaTFwa2Nkdm02MjB6ZWU2cnZjNHd6OHVsZTFjOWxmaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/8ZPdJ9KclyWDuxh1U2/giphy.gif"
-            className="fixed bottom-1 animate-pulse md:right-12 right-10 md:w-40 w-32 z-20"
-          />
+  src="https://pngimg.com/uploads/hello_kitty/hello_kitty_PNG25.png"
+  className="fixed animate-pulse top-10 left-6 md:left-24 md:w-40 w-28 animate__animated animate__bounceIn"
+/>
+<img
+  src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjdhYWExa3ozaTFwa2Nkdm02MjB6ZWU2cnZjNHd6OHVsZTFjOWxmaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/8ZPdJ9KclyWDuxh1U2/giphy.gif"
+  className="fixed z-20 animate-pulse bottom-20 md:bottom-1 md:right-12 right-4 md:w-40 w-24"
+/>
+
           <img
             className="h-[230px] rounded-lg shadow-lg"
             src={showCryingGif ? "https://www.icegif.com/wp-content/uploads/2024/02/icegif-815.gif" : "https://gifdb.com/images/thumbnail/cute-hello-kitty-sticker-love-you-card-urptm0td2fy38a2x.gif"}
