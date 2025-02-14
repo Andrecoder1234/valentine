@@ -38,7 +38,7 @@ export default function Page() {
   };
 
   const handleYesClick = () => {
-    if (noCount <= 17) {
+    if (noCount <= 1) {
       setConfirmingYes(true); // Show confirmation dialog if "Yes" is clicked
     } else {
       setPranked(true); // If user exceeds 20 "No" clicks, show the prank page
@@ -152,7 +152,7 @@ export default function Page() {
             WILL YOU BE MY VALENTINE?
           </h1>
           <div className="flex flex-wrap justify-center gap-2 items-center">
-            {noCount <= 20 && (
+            {noCount <= 17 && (
               <button
                 className={`bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg mr-4 animate__animated animate__zoomIn`}
                 style={{ fontSize: yesButtonSize }}
