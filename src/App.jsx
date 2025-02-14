@@ -31,14 +31,14 @@ export default function Page() {
       "No", "😐", "jajaja I knew you were gonna do that", "Youre lying😭!", "Guess What!",
       "Chicken Buttt!", "you'll regret this😡!", "Baka!!!!", "Meanie butt☹️", "Bruh moment!",
       "Wow okay be like that!", "ok..", "k..", "Okay not funny", "What do you call a French man wearing sandals?",
-      "Philipe Fallop..:(", "Come on that was a good one?", "YEAH im gonna poop on you :(", "Pls"
+      "Philipe Fallop..:(", "YEAH im gonna poop on you :(", "Pls"
     ];
 
     return phrases[Math.min(noCount, phrases.length - 1)];
   };
 
   const handleYesClick = () => {
-    if (noCount <= 20) {
+    if (noCount <= 17) {
       setConfirmingYes(true); // Show confirmation dialog if "Yes" is clicked
     } else {
       setPranked(true); // If user exceeds 20 "No" clicks, show the prank page
