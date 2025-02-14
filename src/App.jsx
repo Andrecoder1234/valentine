@@ -31,7 +31,7 @@ export default function Page() {
       "No", "😐", "jajaja I knew you were gonna do that", "Youre lying😭!", "Guess What!",
       "Chicken Buttt!", "you'll regret this😡!", "Baka!!!!", "Meanie butt☹️", "Bruh moment!",
       "Wow okay be like that!", "ok..", "k..", "Okay not funny", "What do you call a French man wearing sandals?",
-      "Philipe Fallop..:(", "Come on that was a good one?", "YEAH im gonna poop on you :(", "You're Gonna you eat it", "Pls", "Plsss"
+      "Philipe Fallop..:(", "Come on that was a good one?", "YEAH im gonna poop on you :(", "Pls"
     ];
 
     return phrases[Math.min(noCount, phrases.length - 1)];
