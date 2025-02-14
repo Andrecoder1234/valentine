@@ -76,7 +76,7 @@ export default function Page() {
         </div>
         <button
           onClick={handleBackToStart}
-          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg"
+          className="bg-pink-400 hover:bg-pink-500 text-white font-bold py-2 px-4 rounded-lg"
         >
           Back to Start
         </button>
@@ -161,7 +161,7 @@ export default function Page() {
                 Yes
               </button>
             )}
-            {noCount <= 20 && (
+            {noCount <= 17 && (
               <button
                 onClick={handleNoClick}
                 className=" bg-rose-500 hover:bg-rose-600 rounded-lg text-white font-bold py-2 px-4 animate__animated animate__shakeY"
@@ -169,7 +169,7 @@ export default function Page() {
                 {getNoButtonText()}
               </button>
             )}
-            {noCount > 20 && (
+            {noCount > 17 && (
               <button
                 className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg mr-4 animate__animated animate__zoomIn"
                 onClick={handleYesClick}
