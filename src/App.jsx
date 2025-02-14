@@ -146,7 +146,7 @@ export default function Page() {
           />
           <img
             src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjdhYWExa3ozaTFwa2Nkdm02MjB6ZWU2cnZjNHd6OHVsZTFjOWxmaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/8ZPdJ9KclyWDuxh1U2/giphy.gif"
-            className="fixed bottom-16 animate-pulse md:right-24 right-10 md:w-40 w-32 z-20"
+            className="fixed bottom-1 animate-pulse md:right-12 right-10 md:w-40 w-32 z-20"
           />
           <img
             className="h-[230px] rounded-lg shadow-lg"
